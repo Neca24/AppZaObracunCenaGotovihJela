@@ -1,11 +1,14 @@
-﻿namespace Domain.Entities
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace Domain.Entities
 {
     public class Receptura
-    {
+    { 
         public int IdJelo { get; set; }
         public Jelo Jelo { get; set; } = null!;
-        public int ArtikalId { get; set; }
+        public int IdArtikal { get; set; }
         public Artikal Artikal { get; set; } = null!;
+        [Required]
         public decimal Kolicina { get; set; }
 
     }

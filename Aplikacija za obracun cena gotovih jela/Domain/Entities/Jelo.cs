@@ -1,13 +1,19 @@
 ﻿using Domain.Entities.Enums;
+using System.ComponentModel.DataAnnotations;
 
 namespace Domain.Entities
 {
     public class Jelo
     {
         public int Id { get; set; }
+        [Required]
+        [MaxLength(100)]
         public string Naziv { get; set; }
+        [MaxLength(254)]
         public string Opis { get; set; }
-        public JMereJeloEnum JedinicaMere { get; set; } = JMereJeloEnum.Por;
+        [Required]
+        public JMereJeloEnum JedinicaMere { get; set; }
+        [Required]
         public decimal Kolicina { get; set; }
 
         public bool IsActive { get; set; } = true;
