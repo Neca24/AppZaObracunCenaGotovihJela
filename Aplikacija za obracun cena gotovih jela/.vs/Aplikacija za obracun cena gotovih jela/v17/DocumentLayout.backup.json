@@ -1,7 +1,20 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\C# projekat\\Aplikacija za obracun cena gotovih jela\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Users\\Nemanja\\Documents\\GitHub\\AppZaObracunCenaGotovihJela\\Aplikacija za obracun cena gotovih jela\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{97227ABF-11A4-4F47-AC9A-5740C0850541}|Domain\\Domain.csproj|c:\\users\\nemanja\\documents\\github\\appzaobracuncenagotovihjela\\aplikacija za obracun cena gotovih jela\\domain\\entities\\receptura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97227ABF-11A4-4F47-AC9A-5740C0850541}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\receptura.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97227ABF-11A4-4F47-AC9A-5740C0850541}|Domain\\Domain.csproj|c:\\users\\nemanja\\documents\\github\\appzaobracuncenagotovihjela\\aplikacija za obracun cena gotovih jela\\domain\\entities\\artikal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97227ABF-11A4-4F47-AC9A-5740C0850541}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\artikal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{97227ABF-11A4-4F47-AC9A-5740C0850541}|Domain\\Domain.csproj|c:\\users\\nemanja\\documents\\github\\appzaobracuncenagotovihjela\\aplikacija za obracun cena gotovih jela\\domain\\entities\\jelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{97227ABF-11A4-4F47-AC9A-5740C0850541}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\jelo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +31,45 @@
             {
               "$type": "Bookmark",
               "Name": "ST:1009793168:0:{83107a3e-496a-485e-b455-16ddb978e55e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Receptura.cs",
+              "DocumentMoniker": "C:\\Users\\Nemanja\\Documents\\GitHub\\AppZaObracunCenaGotovihJela\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities\\Receptura.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Receptura.cs",
+              "ToolTip": "C:\\Users\\Nemanja\\Documents\\GitHub\\AppZaObracunCenaGotovihJela\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities\\Receptura.cs",
+              "RelativeToolTip": "Domain\\Entities\\Receptura.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T21:28:10.234Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Artikal.cs",
+              "DocumentMoniker": "C:\\Users\\Nemanja\\Documents\\GitHub\\AppZaObracunCenaGotovihJela\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities\\Artikal.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Artikal.cs",
+              "ToolTip": "C:\\Users\\Nemanja\\Documents\\GitHub\\AppZaObracunCenaGotovihJela\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities\\Artikal.cs",
+              "RelativeToolTip": "Domain\\Entities\\Artikal.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T21:27:58.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Jelo.cs",
+              "DocumentMoniker": "C:\\Users\\Nemanja\\Documents\\GitHub\\AppZaObracunCenaGotovihJela\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities\\Jelo.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\Jelo.cs",
+              "ToolTip": "C:\\Users\\Nemanja\\Documents\\GitHub\\AppZaObracunCenaGotovihJela\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities\\Jelo.cs",
+              "RelativeToolTip": "Domain\\Entities\\Jelo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-21T21:26:22.366Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Aplikacija za obracun cena gotovih jela"
+    "\\Aplikacija za obracun cena gotovih jela",
+    "\\Aplikacija za obracun cena gotovih jela\\Domain",
+    "\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities"
   ],
-  "SelectedNode": "\\Aplikacija za obracun cena gotovih jela\\Aplikacija za obracun cena gotovih jela.sln",
+  "SelectedNode": "\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities\\Receptura.cs",
   "PreviewInSolutionExplorer": false
 }
