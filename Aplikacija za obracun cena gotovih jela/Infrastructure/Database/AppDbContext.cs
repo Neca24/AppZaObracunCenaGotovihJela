@@ -17,7 +17,7 @@ namespace Infrastructure.Database
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<Artikal>()
-                .Property(e => e.Jmere)
+                .Property(e => e.JedinicaMere)
                 .HasConversion<string>();
 
             modelBuilder.Entity<Jelo>()

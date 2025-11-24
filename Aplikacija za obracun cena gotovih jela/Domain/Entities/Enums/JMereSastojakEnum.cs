@@ -2,10 +2,10 @@
 {
     public enum JMereSastojakEnum
     {
-        KG = 0,
-        GR = 1,
-        L = 3,
-        ML = 4,
-        KOM = 5
+        KG,
+        GR,
+        L,
+        ML,
+        KOM
     }
 }

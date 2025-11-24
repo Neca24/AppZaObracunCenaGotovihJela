@@ -10,7 +10,7 @@ namespace Domain.Entities
         [MaxLength(50)]
         public string Naziv { get; set; }
         [Required]
-        public JMereSastojakEnum Jmere{ get; set; }
+        public JMereSastojakEnum JedinicaMere{ get; set; }
         [Required]
         public decimal Kolicina { get; set; }
         [Required]

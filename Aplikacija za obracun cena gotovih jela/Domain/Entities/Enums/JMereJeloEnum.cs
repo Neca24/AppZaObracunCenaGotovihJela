@@ -2,8 +2,8 @@
 {
     public enum JMereJeloEnum
     {
-        KOM = 1,
-        POR = 2,
-        KG = 3
+        KOM,
+        POR,
+        KG
     }
 }
