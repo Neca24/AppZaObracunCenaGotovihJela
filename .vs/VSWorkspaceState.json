@@ -2,9 +2,12 @@
   "ExpandedNodes": [
     "",
     "\\Aplikacija za obracun cena gotovih jela",
+    "\\Aplikacija za obracun cena gotovih jela\\Application",
+    "\\Aplikacija za obracun cena gotovih jela\\Application\\DTOs",
+    "\\Aplikacija za obracun cena gotovih jela\\Application\\DTOs\\JeloDTOs",
     "\\Aplikacija za obracun cena gotovih jela\\Domain",
     "\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities"
   ],
-  "SelectedNode": "\\Aplikacija za obracun cena gotovih jela\\Aplikacija za obracun cena gotovih jela.sln",
+  "SelectedNode": "\\Aplikacija za obracun cena gotovih jela\\Application\\DTOs\\JeloDTOs\\JeloCostDTO.cs",
   "PreviewInSolutionExplorer": false
 }

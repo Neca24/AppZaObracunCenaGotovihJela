@@ -1,9 +1,7 @@
-﻿using Domain.Entities;
+﻿using Application.DTOs.ArtikalDTOs;
 
 namespace Application.Services
 {
-    public interface IArtikalService:IService<Artikal>
-    {
-
-    }
+    public interface IArtikalService:IService<ArtikalDTO>
+    {}
 }

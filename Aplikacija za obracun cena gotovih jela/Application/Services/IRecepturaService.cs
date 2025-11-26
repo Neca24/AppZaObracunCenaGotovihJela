@@ -1,10 +1,10 @@
-﻿using Domain.Entities;
+﻿using Application.DTOs.RecepturaDTOs;
 
 namespace Application.Services
 {
     public interface IRecepturaService
     {
-        Task<List<Receptura>> GetForJeloAsync(int id);
-        Task DodajStavku(int id, List<Receptura> stavke);
+        Task<List<RecepturaItemDTO>> GetForJeloAsync(int id);
+        Task DodajStavku(int id, List<RecepturaItemCreateDTO> stavke);
     }
 }
