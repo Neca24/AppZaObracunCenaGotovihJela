@@ -15,7 +15,7 @@ namespace Domain.Entities
         public JMereJeloEnum JedinicaMere { get; set; }
         [Required]
         public decimal Kolicina { get; set; }
-
+        [Required]
         public bool IsActive { get; set; } = true;
         public ICollection<Receptura> recepture { get; set; } = new List<Receptura>();
     }

@@ -28,12 +28,44 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
+[C:/Users/Nemanja/Documents/GitHub/AppZaObracunCenaGotovihJela/Aplikacija za obracun cena gotovih jela/WebUI/Views/Artikal/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWthbFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nemanja/Documents/GitHub/AppZaObracunCenaGotovihJela/Aplikacija za obracun cena gotovih jela/WebUI/Views/Artikal/CreateEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWthbFxDcmVhdGVFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nemanja/Documents/GitHub/AppZaObracunCenaGotovihJela/Aplikacija za obracun cena gotovih jela/WebUI/Views/Artikal/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWthbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nemanja/Documents/GitHub/AppZaObracunCenaGotovihJela/Aplikacija za obracun cena gotovih jela/WebUI/Views/Artikal/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXJ0aWthbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nemanja/Documents/GitHub/AppZaObracunCenaGotovihJela/Aplikacija za obracun cena gotovih jela/WebUI/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nemanja/Documents/GitHub/AppZaObracunCenaGotovihJela/Aplikacija za obracun cena gotovih jela/WebUI/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nemanja/Documents/GitHub/AppZaObracunCenaGotovihJela/Aplikacija za obracun cena gotovih jela/WebUI/Views/Jelo/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmVsb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nemanja/Documents/GitHub/AppZaObracunCenaGotovihJela/Aplikacija za obracun cena gotovih jela/WebUI/Views/Jelo/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmVsb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nemanja/Documents/GitHub/AppZaObracunCenaGotovihJela/Aplikacija za obracun cena gotovih jela/WebUI/Views/Jelo/EditRecepture.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmVsb1xFZGl0UmVjZXB0dXJlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nemanja/Documents/GitHub/AppZaObracunCenaGotovihJela/Aplikacija za obracun cena gotovih jela/WebUI/Views/Jelo/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmVsb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nemanja/Documents/GitHub/AppZaObracunCenaGotovihJela/Aplikacija za obracun cena gotovih jela/WebUI/Views/Shared/Error.cshtml]

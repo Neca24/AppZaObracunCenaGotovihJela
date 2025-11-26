@@ -7,6 +7,5 @@
         public string JedinicaMere { get; set; } = string.Empty;
         public decimal Kolicina { get; set; }
         public decimal Cena { get; set; }
-        public bool IsActive { get; set; }
     }
 }

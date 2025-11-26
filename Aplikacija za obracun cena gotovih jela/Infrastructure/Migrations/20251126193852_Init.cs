@@ -17,10 +17,10 @@ namespace Infrastructure.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Naziv = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    Jmere = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    JedinicaMere = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Kolicina = table.Column<decimal>(type: "decimal(18,3)", precision: 18, scale: 3, nullable: false),
                     Cena = table.Column<decimal>(type: "decimal(18,2)", precision: 18, scale: 2, nullable: false),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                    IsActive = table.Column<bool>(type: "bit", nullable: false, defaultValue: true)
                 },
                 constraints: table =>
                 {
@@ -37,7 +37,7 @@ namespace Infrastructure.Migrations
                     Opis = table.Column<string>(type: "nvarchar(254)", maxLength: 254, nullable: false),
                     JedinicaMere = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Kolicina = table.Column<decimal>(type: "decimal(18,3)", precision: 18, scale: 3, nullable: false),
-                    IsActive = table.Column<bool>(type: "bit", nullable: false)
+                    IsActive = table.Column<bool>(type: "bit", nullable: false, defaultValue: true)
                 },
                 constraints: table =>
                 {

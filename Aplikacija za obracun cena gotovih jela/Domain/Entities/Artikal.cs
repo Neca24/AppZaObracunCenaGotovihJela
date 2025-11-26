@@ -15,6 +15,7 @@ namespace Domain.Entities
         public decimal Kolicina { get; set; }
         [Required]
         public decimal Cena { get; set; }
+        [Required]
         public bool IsActive { get; set; } = true;
 
         public ICollection<Receptura> recepture { get; set; } = new List<Receptura>();

@@ -54,6 +54,14 @@ namespace Infrastructure.Database
             modelBuilder.Entity<Receptura>()
                 .Property(r => r.Kolicina)
                 .HasPrecision(18, 3);
+
+            modelBuilder.Entity<Artikal>()
+                .Property(a => a.IsActive)
+                .HasDefaultValue(true);
+
+            modelBuilder.Entity<Jelo>()
+                .Property(j => j.IsActive)
+                .HasDefaultValue(true);
         }
     }
 }

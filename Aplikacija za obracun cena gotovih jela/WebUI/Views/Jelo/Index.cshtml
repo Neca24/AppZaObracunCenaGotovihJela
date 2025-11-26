@@ -1,0 +1,33 @@
+﻿@using Application.DTOs.JeloDTOs
+@model List<JeloDTO>
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="fw-bold">🍲 Lista Jela</h2>
+    <a class="btn btn-success btn-modern" asp-action="Create">+ Dodaj jelo</a>
+</div>
+
+<div class="card card-custom p-3">
+    <table class="table table-hover align-middle">
+        <thead class="table-dark">
+            <tr>
+                <th>Naziv</th>
+                <th>Cena po porciji</th>
+                <th style="width:160px"></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var j in Model)
+            {
+                <tr>
+                    <td>@j.Naziv</td>
+                    <td><b>@j.CenaPoPorciji</b> RSD</td>
+                    <td>
+                        <a class="btn btn-info btn-sm" asp-action="Details" asp-route-id="@j.Id">Detalji</a>
+                        <a class="btn btn-warning btn-sm" asp-action="EditReceptura" asp-route-id="@j.Id">Receptura</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

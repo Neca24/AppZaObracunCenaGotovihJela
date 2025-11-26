@@ -6,8 +6,10 @@
     "\\Aplikacija za obracun cena gotovih jela\\Application\\DTOs",
     "\\Aplikacija za obracun cena gotovih jela\\Application\\DTOs\\JeloDTOs",
     "\\Aplikacija za obracun cena gotovih jela\\Domain",
-    "\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities"
+    "\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities",
+    "\\Aplikacija za obracun cena gotovih jela\\Infrastructure",
+    "\\Aplikacija za obracun cena gotovih jela\\Infrastructure\\Services"
   ],
-  "SelectedNode": "\\Aplikacija za obracun cena gotovih jela\\Application\\DTOs\\JeloDTOs\\JeloCostDTO.cs",
+  "SelectedNode": "\\Aplikacija za obracun cena gotovih jela\\Infrastructure\\Services\\RecepturaService.cs",
   "PreviewInSolutionExplorer": false
 }

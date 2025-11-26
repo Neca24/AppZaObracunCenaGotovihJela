@@ -14,8 +14,7 @@ namespace Application.Mapper
                 Naziv = artikal.Naziv,
                 JedinicaMere = artikal.JedinicaMere.ToString(),
                 Kolicina = artikal.Kolicina,
-                Cena = artikal.Cena,
-                IsActive = artikal.IsActive
+                Cena = artikal.Cena
             };
         }
 
@@ -27,8 +26,7 @@ namespace Application.Mapper
                 Naziv = dto.Naziv,
                 JedinicaMere = Enum.Parse<JMereSastojakEnum>(dto.JedinicaMere),
                 Kolicina = dto.Kolicina,
-                Cena = dto.Cena,
-                IsActive = dto.IsActive
+                Cena = dto.Cena
             };
         }
     }
