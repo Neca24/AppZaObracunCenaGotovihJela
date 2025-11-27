@@ -14,8 +14,7 @@ namespace Application.Mapper
                 Naziv = jelo.Naziv,
                 Opis = jelo.Opis,
                 JedinicaMere = jelo.JedinicaMere.ToString(),
-                Kolicina = jelo.Kolicina,
-                IsActive = jelo.IsActive
+                Kolicina = jelo.Kolicina
             };
         }
 
@@ -27,8 +26,7 @@ namespace Application.Mapper
                 Naziv = dto.Naziv,
                 Opis = dto.Opis,
                 JedinicaMere = Enum.Parse<JMereJeloEnum>(dto.JedinicaMere),
-                Kolicina = dto.Kolicina,
-                IsActive = dto.IsActive
+                Kolicina = dto.Kolicina
             };
         }
     }

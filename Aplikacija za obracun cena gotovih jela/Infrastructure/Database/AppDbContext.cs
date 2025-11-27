@@ -20,25 +20,6 @@ namespace Infrastructure.Database
                 .Property(e => e.JedinicaMere)
                 .HasConversion<string>();
 
-            modelBuilder.Entity<Jelo>()
-                .Property(e=>e.JedinicaMere)
-                .HasConversion<string>();
-
-            modelBuilder.Entity<Receptura>()
-                .HasKey(e => new { e.IdArtikal, e.IdJelo });
-
-            modelBuilder.Entity<Receptura>()
-                .HasOne(e => e.Jelo)
-                .WithMany(j => j.recepture)
-                .HasForeignKey(e=>e.IdJelo)
-                .OnDelete(DeleteBehavior.Cascade);
-
-            modelBuilder.Entity<Receptura>()
-                .HasOne(e => e.Artikal)
-                .WithMany(a => a.recepture)
-                .HasForeignKey(e => e.IdArtikal)
-                .OnDelete(DeleteBehavior.Restrict);
-
             modelBuilder.Entity<Artikal>()
                 .Property(a => a.Cena)
                 .HasPrecision(18, 2);
@@ -47,21 +28,48 @@ namespace Infrastructure.Database
                 .Property(a => a.Kolicina)
                 .HasPrecision(18, 3);
 
-            modelBuilder.Entity<Jelo>()
-                .Property(j => j.Kolicina)
-                .HasPrecision(18, 3);
-
-            modelBuilder.Entity<Receptura>()
-                .Property(r => r.Kolicina)
-                .HasPrecision(18, 3);
-
             modelBuilder.Entity<Artikal>()
                 .Property(a => a.IsActive)
                 .HasDefaultValue(true);
 
+            modelBuilder.Entity<Receptura>()
+                .HasKey(r => r.Id);
+
+            modelBuilder.Entity<Receptura>()
+                .HasIndex(r => new { r.IdJelo, r.IdArtikal })
+                .IsUnique();
+
+            modelBuilder.Entity<Receptura>()
+                .HasOne(e => e.Jelo)
+                .WithMany(j => j.recepture)
+                .HasForeignKey(e => e.IdJelo)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            modelBuilder.Entity<Receptura>()
+                .HasOne(e => e.Artikal)
+                .WithMany(a => a.recepture)
+                .HasForeignKey(e => e.IdArtikal)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Receptura>()
+                .Property(r => r.Kolicina)
+                .HasPrecision(18, 2);
+
+            modelBuilder.Entity<Jelo>()
+                .Property(e => e.JedinicaMere)
+                .HasConversion<string>();
+
+            modelBuilder.Entity<Jelo>()
+                .Property(j => j.Kolicina)
+                .HasPrecision(18, 2);
+
             modelBuilder.Entity<Jelo>()
                 .Property(j => j.IsActive)
                 .HasDefaultValue(true);
+
+            modelBuilder.Entity<Jelo>()
+                .Property(j => j.Opis)
+                .IsRequired(false);
         }
     }
 }

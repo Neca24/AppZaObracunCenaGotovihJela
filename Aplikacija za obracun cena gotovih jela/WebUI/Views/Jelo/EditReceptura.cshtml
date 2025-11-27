@@ -1,0 +1,156 @@
+﻿@model EditRecepturaViewModel
+
+@{
+    ViewData["Title"] = "Izmena recepture";
+}
+
+<div class="container">
+
+    <h2 class="fw-bold mb-4 text-center">
+        <img src="~/ikonice/Recepture.png" class="me-2" style="width:50px; height:50px;" />
+        Kreiranje novog jela
+    </h2>
+
+    <div class="card shadow-sm p-4 col-lg-8 mx-auto">
+
+        <form method="post" asp-action="EditReceptura">
+
+            <input asp-for="JeloId" type="hidden" />
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-3" role="alert" style="display:none;"></div>
+
+            <h5 class="fw-bold mb-3">Postojeći sastojci</h5>
+
+            @if (!Model.PostojeceStavke.Any())
+            {
+                <p class="text-muted">Još nema dodatih sastojaka.</p>
+            }
+            else
+            {
+                <div class="list-group mb-4">
+                    @for (int i = 0; i < Model.PostojeceStavke.Count; i++)
+                    {
+                        <div class="list-group-item py-3">
+                            <div class="row align-items-center">
+
+                                <input type="hidden"
+                                       name="Stavke[@i].IdArtikal"
+                                       value="@Model.PostojeceStavke[i].IdArtikal" />
+
+                                <div class="col-md-5 fw-semibold">
+                                    @Model.PostojeceStavke[i].NazivArtikla
+                                </div>
+
+                                <div class="col-md-2 text-muted">
+                                    @Model.PostojeceStavke[i].JedinicaMere
+                                </div>
+
+                                <div class="col-md-3">
+                                    <input type="number"
+                                           name="Stavke[@i].Kolicina"
+                                           value="@Model.PostojeceStavke[i].Kolicina"
+                                           step="0.01"
+                                           min="0"
+                                           class="form-control" />
+                                </div>
+
+                                <div class="col-md-2 text-end">
+                                    <button type="button"
+                                            class="btn btn-outline-danger btn-sm"
+                                            onclick="this.closest('.list-group-item').remove()">
+                                        Obriši
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+
+            <hr />
+
+            <h5 class="fw-bold mb-3">Dodaj novi sastojak</h5>
+
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <select id="artikalSelect" class="form-select">
+                        <option value="">-- Izaberi artikal --</option>
+                        @foreach (var a in Model.Artikli)
+                        {
+                            <option value="@a.Id" data-jm="@a.JedinicaMere">@a.Naziv (@a.JedinicaMere)</option>
+                        }
+                    </select>
+                </div>
+
+                <div class="col-md-4">
+                    <input id="novaKolicina" type="number" class="form-control"
+                           placeholder="Količina" min="0" step="10" />
+                </div>
+
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-success w-100"
+                            onclick="addStavka()">
+                        Dodaj
+                    </button>
+                </div>
+            </div>
+
+            <div id="new-items"></div>
+
+            <button class="btn btn-primary w-100 mt-3">Sačuvaj recepturu</button>
+
+        </form>
+    </div>
+</div>
+
+    <script>
+        let indexCounter = @Model.PostojeceStavke.Count
+
+        function addStavka() {
+            const sel = document.getElementById("artikalSelect");
+            const id = sel.value;
+            const text = sel.selectedOptions[0].text;
+            const jm = sel.selectedOptions[0].dataset.jm;
+            const k = document.getElementById("novaKolicina").value;
+
+            if (!id || !k) {
+                alert("Izaberi artikal i unesi količinu.");
+                return;
+            }
+
+            const html = `
+                <div class="list-group-item py-3">
+                    <div class="row align-items-center">
+
+                        <input type="hidden" name="Stavke[${indexCounter}].IdArtikal" value="${id}" />
+
+                        <div class="col-md-5 fw-semibold">${text}</div>
+                        <div class="col-md-2 text-muted">${jm}</div>
+
+                        <div class="col-md-3">
+                            <input type="number"
+                                   name="Stavke[${indexCounter}].Kolicina"
+                                   value="${k}"
+                                   class="form-control"
+                                   step="0.001" min="0" />
+                        </div>
+
+                        <div class="col-md-2 text-end">
+                            <button type="button"
+                                    class="btn btn-outline-danger btn-sm"
+                                    onclick="this.closest('.list-group-item').remove()">
+                                Obriši
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            `;
+
+            document.getElementById("new-items").insertAdjacentHTML('beforeend', html);
+
+            indexCounter++;
+            sel.value = "";
+            document.getElementById("novaKolicina").value = "";
+        }
+    </script>
+}

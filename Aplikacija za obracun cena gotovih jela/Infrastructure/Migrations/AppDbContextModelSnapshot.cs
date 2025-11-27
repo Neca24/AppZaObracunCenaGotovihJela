@@ -74,8 +74,8 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<decimal>("Kolicina")
-                        .HasPrecision(18, 3)
-                        .HasColumnType("decimal(18,3)");
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
 
                     b.Property<string>("Naziv")
                         .IsRequired()
@@ -83,7 +83,6 @@ namespace Infrastructure.Migrations
                         .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("Opis")
-                        .IsRequired()
                         .HasMaxLength(254)
                         .HasColumnType("nvarchar(254)");
 
@@ -94,6 +93,12 @@ namespace Infrastructure.Migrations
 
             modelBuilder.Entity("Domain.Entities.Receptura", b =>
                 {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
                     b.Property<int>("IdArtikal")
                         .HasColumnType("int");
 
@@ -101,12 +106,15 @@ namespace Infrastructure.Migrations
                         .HasColumnType("int");
 
                     b.Property<decimal>("Kolicina")
-                        .HasPrecision(18, 3)
-                        .HasColumnType("decimal(18,3)");
+                        .HasPrecision(18, 2)
+                        .HasColumnType("decimal(18,2)");
 
-                    b.HasKey("IdArtikal", "IdJelo");
+                    b.HasKey("Id");
 
-                    b.HasIndex("IdJelo");
+                    b.HasIndex("IdArtikal");
+
+                    b.HasIndex("IdJelo", "IdArtikal")
+                        .IsUnique();
 
                     b.ToTable("Recepture");
                 });

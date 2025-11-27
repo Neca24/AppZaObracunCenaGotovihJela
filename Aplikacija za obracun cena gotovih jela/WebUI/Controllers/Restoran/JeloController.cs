@@ -38,7 +38,7 @@ namespace WebUI.Controllers.Restoran
                 return View(dto);
 
             var id = await _jeloService.CreateAsync(dto);
-            return RedirectToAction("EditReceptura", new {id});
+            return RedirectToAction("EditReceptura", new { id });
         }
 
         public async Task<IActionResult> Details(int id)
@@ -65,6 +65,13 @@ namespace WebUI.Controllers.Restoran
         {
             await _recepturaService.DodajStavku(vm.JeloId, vm.Stavke);
             return RedirectToAction("Details", new { id = vm.JeloId });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            await _jeloService.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
         }
     }
 }

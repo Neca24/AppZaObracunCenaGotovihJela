@@ -26,7 +26,7 @@ namespace Infrastructure.Services
             var jelo = entity.ToEntity();
             await _context.Jela.AddAsync(jelo);
             await _context.SaveChangesAsync();
-            return entity.Id;
+            return jelo.Id;
         }
 
         public async Task DeleteAsync(int id)

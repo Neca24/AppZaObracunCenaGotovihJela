@@ -9,7 +9,7 @@ namespace Application.Mapper
         {
             return new RecepturaItemDTO
             {
-                IdJelo = receptura.IdJelo,
+                Id = receptura.Id,
                 IdArtikal = receptura.IdArtikal,
                 NazivArtikla = receptura.Artikal.Naziv,
                 JedinicaMere = receptura.Artikal.JedinicaMere.ToString(),

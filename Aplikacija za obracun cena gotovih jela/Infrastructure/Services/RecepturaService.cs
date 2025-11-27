@@ -1,6 +1,7 @@
 ﻿using Application.DTOs.RecepturaDTOs;
 using Application.Mapper;
 using Application.Services;
+using Domain.Entities;
 using Infrastructure.Database;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,13 +16,26 @@ namespace Infrastructure.Services
             _context = context;
         }
 
-        public async Task DodajStavku(int id, List<RecepturaItemCreateDTO> stavke)
+        public async Task DodajStavku(int jeloId, List<RecepturaItemCreateDTO> stavke)
         {
-            var postojece = _context.Recepture.Where(r=>r.IdJelo == id);
-            _context.Recepture.RemoveRange(postojece);
+            var stare = await _context.Recepture
+                .Where(r => r.IdJelo == jeloId)
+                .ToListAsync();
 
-            foreach(var s in stavke)
-                _context.Recepture.Add(RecepturaMapper.ToEntity(id, s));
+            _context.Recepture.RemoveRange(stare);
+            await _context.SaveChangesAsync();
+
+            foreach (var s in stavke)
+            {
+                var r = new Receptura
+                {
+                    IdJelo = jeloId,
+                    IdArtikal = s.IdArtikal,
+                    Kolicina = s.Kolicina
+                };
+
+                _context.Recepture.Add(r);
+            }
 
             await _context.SaveChangesAsync();
         }
