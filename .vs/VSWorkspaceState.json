@@ -2,17 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Aplikacija za obracun cena gotovih jela",
-    "\\Aplikacija za obracun cena gotovih jela\\Application",
-    "\\Aplikacija za obracun cena gotovih jela\\Application\\DTOs",
-    "\\Aplikacija za obracun cena gotovih jela\\Application\\DTOs\\JeloDTOs",
     "\\Aplikacija za obracun cena gotovih jela\\Domain",
     "\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities",
     "\\Aplikacija za obracun cena gotovih jela\\Infrastructure",
     "\\Aplikacija za obracun cena gotovih jela\\Infrastructure\\Services",
     "\\Aplikacija za obracun cena gotovih jela\\WebUI",
     "\\Aplikacija za obracun cena gotovih jela\\WebUI\\Views",
+    "\\Aplikacija za obracun cena gotovih jela\\WebUI\\Views\\Home",
     "\\Aplikacija za obracun cena gotovih jela\\WebUI\\Views\\Jelo"
   ],
-  "SelectedNode": "\\Aplikacija za obracun cena gotovih jela\\WebUI\\Views\\Jelo\\Index.cshtml",
+  "SelectedNode": "\\Aplikacija za obracun cena gotovih jela\\WebUI\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

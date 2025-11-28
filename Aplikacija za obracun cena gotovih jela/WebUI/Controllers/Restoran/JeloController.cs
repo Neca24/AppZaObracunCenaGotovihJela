@@ -1,7 +1,6 @@
 ﻿using Application.DTOs.JeloDTOs;
 using Application.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Threading.Tasks;
 using WebUI.Models;
 
 namespace WebUI.Controllers.Restoran
