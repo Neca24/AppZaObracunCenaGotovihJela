@@ -23,7 +23,7 @@ Projekat koristi Clean Architecture podeljen na:
 
 Ovako definisana struktura omogućava jasnu modularnost, testabilnost i lako održavanje.
 
-##Pokretanje projekta
+## Pokretanje projekta
 1. Klonirati repozitorijum
 2. Pokrenuti rešenje u Visual Studiu 2022
 3. Potrebno je pokrenuti skriptu za bazu podataka
