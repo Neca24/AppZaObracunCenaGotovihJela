@@ -5,13 +5,17 @@ Ovo je ASP.NET Core MVC aplikacija razvijena u skladu sa Clean Architecture prin
 ## Tehnologije
 - ASP.NET Core MVC
 - Entity Framework (Code-First)
-- SQL Server
+- Microsoft SQL Server
 - Clean Architecture
 - Bootstrap 5
 - HTML
 - CSS
 - JavaScript
 - C#
+
+## Alati za razvoj
+- Visual Studio 2022
+- SQL Server Management Studio
 
 ## Arhitektura projekta
 Projekat koristi Clean Architecture podeljen na:
