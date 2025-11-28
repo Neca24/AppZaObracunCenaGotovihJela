@@ -15,7 +15,7 @@ Ovo je ASP.NET Core MVC aplikacija razvijena u skladu sa Clean Architecture prin
 
 ## Alati za razvoj
 - Visual Studio 2022
-- SQL Server Management Studio
+- SQL Server Management Studio (SSMS)
 
 ## Arhitektura projekta
 Projekat koristi Clean Architecture podeljen na:
@@ -30,6 +30,17 @@ Ovako definisana struktura omogućava jasnu modularnost, testabilnost i lako odr
 ## Pokretanje projekta
 1. Klonirati repozitorijum
 2. Pokrenuti rešenje u Visual Studiu 2022
-3. Potrebno je pokrenuti skriptu za bazu podataka
-4. Podesiti Connection String u appsettings.json
-5. Pokrenuti WebUI projekat
+3. Otvoriti SSMS i kreirati novu bazu GoldenDb
+4. Zatim otvoriti novi Query i nalepiti poslatu skriptu
+5. Execute
+6. Podesiti Connection String u appsettings.json
+7. Pokrenuti WebUI projekat
+
+## Sceenshot-ovi
+> ![Početna strana]
+<img width="1919" height="1022" alt="image" src="https://github.com/user-attachments/assets/264f57e5-4cdc-455e-8ef1-09e4463a7875" />
+
+
+## Autor
+Nemanja Stojadinović
+Apsolvent na Fakultetu tehničkih nauka u Čačku
