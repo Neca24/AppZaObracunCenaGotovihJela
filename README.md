@@ -47,5 +47,5 @@ Ovako definisana struktura omogućava jasnu modularnost, testabilnost i lako odr
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/840be708-16ee-44ba-8da1-3b6f1117ee1b" />
 
 ## Autor
-Nemanja Stojadinović
-Apsolvent na Fakultetu tehničkih nauka u Čačku
+- Nemanja Stojadinović
+- Apsolvent na Fakultetu tehničkih nauka u Čačku
