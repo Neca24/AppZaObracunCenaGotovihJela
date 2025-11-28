@@ -21,7 +21,6 @@
                 <tr>
                     <th>Naziv</th>
                     <th>JM</th>
-                    <th>Količina</th>
                     <th>Cena</th>
                     <th style="width:130px"></th>
                 </tr>
@@ -33,8 +32,7 @@
                     <tr>
                         <td>@a.Naziv</td>
                         <td>@a.JedinicaMere</td>
-                        <td>@a.Kolicina</td>
-                        <td>@a.Cena</td>
+                        <td>@a.Cena.ToString("N2")</td>
                         <td>
                             <div class="d-flex gap-2">
                                 <a class="btn btn-warning btn-sm" asp-action="Edit" asp-route-id="@a.Id">Izmeni</a>

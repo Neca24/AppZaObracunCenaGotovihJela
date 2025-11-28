@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251127183128_Init")]
+    [Migration("20251128005320_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -44,10 +44,6 @@ namespace Infrastructure.Migrations
                     b.Property<string>("JedinicaMere")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Kolicina")
-                        .HasPrecision(18, 3)
-                        .HasColumnType("decimal(18,3)");
 
                     b.Property<string>("Naziv")
                         .IsRequired()

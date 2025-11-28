@@ -8,8 +8,11 @@
     "\\Aplikacija za obracun cena gotovih jela\\Domain",
     "\\Aplikacija za obracun cena gotovih jela\\Domain\\Entities",
     "\\Aplikacija za obracun cena gotovih jela\\Infrastructure",
-    "\\Aplikacija za obracun cena gotovih jela\\Infrastructure\\Services"
+    "\\Aplikacija za obracun cena gotovih jela\\Infrastructure\\Services",
+    "\\Aplikacija za obracun cena gotovih jela\\WebUI",
+    "\\Aplikacija za obracun cena gotovih jela\\WebUI\\Views",
+    "\\Aplikacija za obracun cena gotovih jela\\WebUI\\Views\\Jelo"
   ],
-  "SelectedNode": "\\Aplikacija za obracun cena gotovih jela\\Infrastructure\\Services\\RecepturaService.cs",
+  "SelectedNode": "\\Aplikacija za obracun cena gotovih jela\\WebUI\\Views\\Jelo\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }

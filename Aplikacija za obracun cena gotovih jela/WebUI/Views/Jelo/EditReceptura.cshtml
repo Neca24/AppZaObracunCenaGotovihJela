@@ -14,8 +14,8 @@
     <div class="card shadow-sm p-4 col-lg-8 mx-auto">
 
         <form method="post" asp-action="EditReceptura">
-
             <input asp-for="JeloId" type="hidden" />
+
             <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-3" role="alert" style="display:none;"></div>
 
             <h5 class="fw-bold mb-3">Postojeći sastojci</h5>
@@ -45,12 +45,12 @@
                                 </div>
 
                                 <div class="col-md-3">
-                                    <input type="number"
+                                    <input type="text"
                                            name="Stavke[@i].Kolicina"
                                            value="@Model.PostojeceStavke[i].Kolicina"
                                            step="0.01"
-                                           min="0"
-                                           class="form-control" />
+                                           min="0.01"
+                                           class="form-control decimal-input" />
                                 </div>
 
                                 <div class="col-md-2 text-end">
@@ -82,8 +82,8 @@
                 </div>
 
                 <div class="col-md-4">
-                    <input id="novaKolicina" type="number" class="form-control"
-                           placeholder="Količina" min="0" step="10" />
+                    <input id="novaKolicina" type="text" class="form-control decimal-input"
+                           placeholder="Količina" min="0.01" step="10" />
                 </div>
 
                 <div class="col-md-2">
@@ -102,55 +102,60 @@
     </div>
 </div>
 
-    <script>
-        let indexCounter = @Model.PostojeceStavke.Count
+<script>
+    let indexCounter = @Model.PostojeceStavke.Count
 
-        function addStavka() {
-            const sel = document.getElementById("artikalSelect");
-            const id = sel.value;
-            const text = sel.selectedOptions[0].text;
-            const jm = sel.selectedOptions[0].dataset.jm;
-            const k = document.getElementById("novaKolicina").value;
+    function addStavka() {
+        const sel = document.getElementById("artikalSelect");
+        const id = sel.value;
+        const text = sel.selectedOptions[0].text;
+        const jm = sel.selectedOptions[0].dataset.jm;
+        const k = document.getElementById("novaKolicina").value;
 
-            if (!id || !k) {
-                alert("Izaberi artikal i unesi količinu.");
-                return;
-            }
-
-            const html = `
-                <div class="list-group-item py-3">
-                    <div class="row align-items-center">
-
-                        <input type="hidden" name="Stavke[${indexCounter}].IdArtikal" value="${id}" />
-
-                        <div class="col-md-5 fw-semibold">${text}</div>
-                        <div class="col-md-2 text-muted">${jm}</div>
-
-                        <div class="col-md-3">
-                            <input type="number"
-                                   name="Stavke[${indexCounter}].Kolicina"
-                                   value="${k}"
-                                   class="form-control"
-                                   step="0.001" min="0" />
-                        </div>
-
-                        <div class="col-md-2 text-end">
-                            <button type="button"
-                                    class="btn btn-outline-danger btn-sm"
-                                    onclick="this.closest('.list-group-item').remove()">
-                                Obriši
-                            </button>
-                        </div>
-
-                    </div>
-                </div>
-            `;
-
-            document.getElementById("new-items").insertAdjacentHTML('beforeend', html);
-
-            indexCounter++;
-            sel.value = "";
-            document.getElementById("novaKolicina").value = "";
+        if (!id || !k) {
+            alert("Izaberi artikal i unesi količinu.");
+            return;
         }
-    </script>
-}
+
+        const html = `
+            <div class="list-group-item py-3">
+                <div class="row align-items-center">
+
+                    <input type="hidden" name="Stavke[${indexCounter}].IdArtikal" value="${id}" />
+
+                    <div class="col-md-5 fw-semibold">${text}</div>
+                    <div class="col-md-2 text-muted">${jm}</div>
+
+                    <div class="col-md-3">
+                        <input type="text"
+                               name="Stavke[${indexCounter}].Kolicina"
+                               value="${k}"
+                               class="form-control decimal-input"
+                               step="0.01" min="0.01"/>
+                    </div>
+
+                    <div class="col-md-2 text-end">
+                        <button type="button"
+                                class="btn btn-outline-danger btn-sm"
+                                onclick="this.closest('.list-group-item').remove()">
+                            Obriši
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        `;
+
+        document.getElementById("new-items").insertAdjacentHTML('beforeend', html);
+
+        indexCounter++;
+        sel.value = "";
+        document.getElementById("novaKolicina").value = "";
+
+        document.querySelectorAll('.decimal-input').forEach(el => {
+            el.addEventListener('input', () => {
+                el.value = el.value.replace('.', ',');
+            });
+        });
+    }
+</script>

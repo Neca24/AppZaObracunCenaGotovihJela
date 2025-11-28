@@ -24,7 +24,7 @@ namespace WebUI.Controllers.Restoran
 
         public IActionResult Create()
         {
-            return View("CreateEdit",new ArtikalDTO());
+            return View(nameof(Create),new ArtikalDTO());
         }
 
         [HttpPost]
@@ -32,10 +32,20 @@ namespace WebUI.Controllers.Restoran
         public async Task<IActionResult> Create(ArtikalDTO dto)
         {
             if (!ModelState.IsValid)
-                return View("CreateEdit", dto);
+                return View(nameof(Create), dto);
 
             await _artikalService.CreateAsync(dto);
             return RedirectToAction(nameof(Index));
+        }
+
+        public async Task<IActionResult> Edit(int id)
+        {
+            var dto = await _artikalService.GetByIdAsync(id);
+
+            if (dto == null)
+                return NotFound();
+
+            return View(nameof(Edit), dto);
         }
 
         [HttpPost]
@@ -43,7 +53,7 @@ namespace WebUI.Controllers.Restoran
         public async Task<IActionResult> Edit(ArtikalDTO dto)
         {
             if(!ModelState.IsValid)
-                return View("CreateEdit",dto);
+                return View(nameof(Edit),dto);
 
             await _artikalService.UpdateAsync(dto);
             return RedirectToAction(nameof(Index));

@@ -15,7 +15,6 @@
     <div class="card shadow-sm p-4 col-lg-6 col-md-8 mx-auto">
 
         <form method="post" asp-antiforgery="true">
-
             <div asp-validation-summary="ModelOnly" class="alert alert-danger mb-3" role="alert" style="display:none;"></div>
 
             <div class="mb-3">
@@ -31,7 +30,7 @@
             </div>
 
             <div class="row mb-3">
-                <div class="col-6">
+                <div class="col-md-6">
                     <label asp-for="JedinicaMere" class="form-label fw-semibold"></label>
                     <select asp-for="JedinicaMere"
                             asp-items="Html.GetEnumSelectList<Domain.Entities.Enums.JMereJeloEnum>()"
@@ -39,7 +38,7 @@
                     <span asp-validation-for="JedinicaMere" class="text-danger"></span>
                 </div>
 
-                <div class="col-6">
+                <div class="col-md-6">
                     <label asp-for="Kolicina" class="form-label fw-semibold"></label>
                     <input asp-for="Kolicina" class="form-control" />
                     <span asp-validation-for="Kolicina" class="text-danger"></span>

@@ -46,7 +46,15 @@ namespace WebUI.Controllers.Restoran
             var jelo = await _jeloService.GetByIdAsync(id);
             if (jelo == null) return NotFound();
 
+            ViewBag.UkupnaCena = await _jeloService.UkupnaCena(jelo.Id, jelo.Kolicina);
+
             return View(jelo);
+        }
+
+        [HttpPost]
+        public IActionResult Details(int id, decimal brojPorcija)
+        {
+            return RedirectToAction("Details", new { id, brojPorcija });
         }
 
         public async Task<IActionResult> EditReceptura(int id)

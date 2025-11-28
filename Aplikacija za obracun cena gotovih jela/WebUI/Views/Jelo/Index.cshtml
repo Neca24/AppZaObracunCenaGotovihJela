@@ -22,6 +22,7 @@
                         <th>Naziv</th>
                         <th>JM</th>
                         <th>Količina</th>
+                        <th>Cena po porciji</th>
                         <th>Akcije</th>
                     </tr>
                 </thead>
@@ -32,6 +33,7 @@
                             <td>@j.Naziv</td>
                             <td>@j.JedinicaMere</td>
                             <td>@j.Kolicina</td>
+                            <td>@j.CenaPoPorciji.ToString("N2")</td>
                             <td>
                                 <a asp-action="Details" asp-route-id="@j.Id" class="btn btn-primary btn-sm">Detalji</a>
                                 <a asp-action="EditReceptura" asp-route-id="@j.Id" class="btn btn-warning btn-sm">Receptura</a>

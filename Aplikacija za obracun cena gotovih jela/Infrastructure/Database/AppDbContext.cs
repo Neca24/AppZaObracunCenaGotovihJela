@@ -25,10 +25,6 @@ namespace Infrastructure.Database
                 .HasPrecision(18, 2);
 
             modelBuilder.Entity<Artikal>()
-                .Property(a => a.Kolicina)
-                .HasPrecision(18, 3);
-
-            modelBuilder.Entity<Artikal>()
                 .Property(a => a.IsActive)
                 .HasDefaultValue(true);
 

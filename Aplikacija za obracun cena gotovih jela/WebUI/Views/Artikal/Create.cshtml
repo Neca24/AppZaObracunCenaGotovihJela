@@ -2,16 +2,14 @@
 @model ArtikalDTO
 
 @{
-    var title = ViewContext.RouteData.Values["action"]!.ToString() == "Create"
-        ? "Dodaj artikal"
-        : "Izmeni artikal";
+    ViewData["Title"] = "Dodavanje artikla";
 }
 
 <div class="container">
 
     <h2 class="fw-bold mb-4 text-center">
         <img src="~/ikonice/artikalCreateEdit.png" class="me-2" style="width:50px; height:50px;" />
-        @title
+        Novi artikal
     </h2>
 
     <div class="card shadow-sm p-4 col-lg-6 col-md-8 col-sm-12 mx-auto">
@@ -26,20 +24,14 @@
                 <span asp-validation-for="Naziv" class="text-danger"></span>
             </div>
 
-            <div class="mb-3">
-                <label asp-for="JedinicaMere" class="form-label fw-semibold"></label>
-                <select asp-for="JedinicaMere" class="form-select"
-                        asp-items="Html.GetEnumSelectList<Domain.Entities.Enums.JMereSastojakEnum>()"></select>
-                <span asp-validation-for="JedinicaMere" class="text-danger"></span>
-            </div>
-
             <div class="row mb-3">
-                <div class="col-6">
-                    <label asp-for="Kolicina" class="form-label fw-semibold"></label>
-                    <input asp-for="Kolicina" class="form-control" />
-                    <span asp-validation-for="Kolicina" class="text-danger"></span>
+                <div class="col-md-6">
+                    <label asp-for="JedinicaMere" class="form-label fw-semibold"></label>
+                    <select asp-for="JedinicaMere" class="form-select"
+                            asp-items="Html.GetEnumSelectList<Domain.Entities.Enums.JMereSastojakEnum>()"></select>
+                    <span asp-validation-for="JedinicaMere" class="text-danger"></span>
                 </div>
-                <div class="col-6">
+                <div class="col-md-6">
                     <label asp-for="Cena" class="form-label fw-semibold"></label>
                     <input asp-for="Cena" class="form-control" />
                     <span asp-validation-for="Cena" class="text-danger"></span>

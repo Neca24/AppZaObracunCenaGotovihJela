@@ -75,7 +75,7 @@ namespace Infrastructure.Services
             return dto;
         }
 
-        public async Task<decimal> UkupnaCena(int id, int brojPorcija)
+        public async Task<decimal> UkupnaCena(int id, decimal brojPorcija)
         {
             var cena = await CenaPoPorciji(id);
             return cena * brojPorcija;

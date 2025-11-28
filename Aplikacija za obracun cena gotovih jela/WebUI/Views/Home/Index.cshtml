@@ -1,8 +1,37 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Početna";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="fw-bold display-5">Aplikacija za obračun cene koštanja jela</h1>
+        <p class="lead text-muted mt-3">
+            Brzo i precizno upravljanje sastojcima, recepturama i troškovima hrane —
+            idealno rešenje za restorane, kuhinje i ugostiteljske objekte.
+        </p>
+
+        <a asp-controller="Jelo" asp-action="Index"
+           class="btn btn-primary btn-lg mt-3 px-4 py-2 fw-semibold">
+            Započni rad
+        </a>
+    </div>
+    <hr/>
+
+    <div class="card shadow-sm border-0 mt-5">
+        <div class="card-body p-4">
+            <h4 class="fw-bold mb-3">O projektu</h4>
+            <p class="text-muted">
+                Ovaj projekat razvijen je kao deo procesa prijave za praksu.
+                Nastojao sam da primenim Clean Architecture pristup, Entity Framework Code-First model i da izgradim jasan i pouzdan raspored logičkih slojeva, uz moderan i responzivan UI dizajn.
+                Aplikacija pokazuje moje razumevanje backend logike, arhitekture i izrade korisničkog interfejsa spremnog za upotrebu.
+            </p>
+
+            <a href="https://github.com/Neca24/AppZaObracunCenaGotovihJela" target="_blank"
+               class="btn btn-outline-dark fw-semibold mt-2">
+                <i class="bi bi-github me-2"></i> Pogledaj GitHub repozitorijum
+            </a>
+        </div>
+    </div>
+
 </div>
