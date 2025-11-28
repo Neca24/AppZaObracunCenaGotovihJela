@@ -37,10 +37,10 @@ Ovako definisana struktura omogućava jasnu modularnost, testabilnost i lako odr
 7. Pokrenuti WebUI projekat
 
 ## Sceenshot-ovi
-> ![Početna strana](https://github.com/user-attachments/assets/264f57e5-4cdc-455e-8ef1-09e4463a7875)
-> ![Lista artikala](https://github.com/user-attachments/assets/8b97367e-2497-4660-8eff-013cf1d60c5f)
-> ![Lista jela](https://github.com/user-attachments/assets/793ef5ae-0699-48d4-8bf6-31e163f6cd7a)
-> ![Detalji recepture](https://github.com/user-attachments/assets/840be708-16ee-44ba-8da1-3b6f1117ee1b)
+![Početna strana](https://github.com/user-attachments/assets/264f57e5-4cdc-455e-8ef1-09e4463a7875)
+![Lista artikala](https://github.com/user-attachments/assets/8b97367e-2497-4660-8eff-013cf1d60c5f)
+![Lista jela](https://github.com/user-attachments/assets/793ef5ae-0699-48d4-8bf6-31e163f6cd7a)
+![Detalji recepture](https://github.com/user-attachments/assets/840be708-16ee-44ba-8da1-3b6f1117ee1b)
 
 ## Autor
 - Nemanja Stojadinović
